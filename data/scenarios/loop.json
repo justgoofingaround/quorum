@@ -1,0 +1,46 @@
+{
+  "id": "loop",
+  "company": {
+    "name": "Loop",
+    "sector": "Consumer subscription app",
+    "cash": 3000000,
+    "mrr": 180000,
+    "monthly_opex": 230000,
+    "organic_growth": 0.02,
+    "churn": 0.03,
+    "gross_margin": 0.7,
+    "headcount": 22,
+    "arpa": 40
+  },
+  "assumptions": {
+    "eng_monthly_cost": 13000,
+    "eng_ramp_months": 4,
+    "eng_growth_lift": 0.002,
+    "cac": 120,
+    "marketing_months": 6,
+    "stress_mrr_shock": 0.3,
+    "min_stress_runway": 12,
+    "cac_saturation_spend": 200000
+  },
+  "options": [
+    {
+      "id": "A",
+      "label": "",
+      "engineers": 4,
+      "marketing_budget": 0
+    },
+    {
+      "id": "B",
+      "label": "",
+      "engineers": 0,
+      "marketing_budget": 450000
+    },
+    {
+      "id": "C",
+      "label": "",
+      "engineers": 2,
+      "marketing_budget": 200000
+    }
+  ],
+  "question": "Paid acquisition is cheap right now. Should we spend $450K on it or hire engineers?"
+}

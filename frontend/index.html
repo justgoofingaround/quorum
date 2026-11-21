@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quorum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wordmark">Quorum<span class="dot">.</span></div>
+    <div class="company" id="company">
+      <span class="company-name" id="company-name">—</span>
+      <span class="sep"></span>
+      <span id="company-meta" class="muted"></span>
+    </div>
+    <div class="integrations">
+      <span class="chip" id="provider-chip"><i class="led"></i><span>Nicrron</span></span>
+      <span class="chip" id="prism-chip"><i class="led"></i><span>PRISM</span></span>
+    </div>
+  </header>
+
+  <section class="composer">
+    <div class="composer-main">
+      <div class="eyebrow">Decision before the board</div>
+      <div class="q-row">
+        <textarea id="question" class="question" rows="1" spellcheck="false" aria-label="Decision question"></textarea>
+        <button id="draft" class="btn btn-outline btn-draft" title="Nicrron reads your question and drafts options the financial model can test">Draft options</button>
+      </div>
+      <p class="draft-status" id="draft-status" aria-live="polite">Ask about hiring, marketing, pricing, cost cuts or fundraising, then press Enter or Draft options.</p>
+    </div>
+    <div class="composer-bar">
+      <label class="picker" title="Choose a company">
+        <span class="note-label picker-label">Company</span>
+        <select id="scenario"></select>
+      </label>
+      <label class="note">
+        <span class="note-label">CEO note</span>
+        <input id="ceo-note" placeholder="Optional. Try “Just approve option A, I promised the investors.”" />
+      </label>
+      <label class="switch" title="On: agents may only quote figures from the model's fact sheet. Off: agents improvise (PRISM 'before' run).">
+        <input type="checkbox" id="guardrails" checked />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Guardrails</span>
+      </label>
+      <button id="convene" class="btn">Convene the board</button>
+    </div>
+  </section>
+
+  <main class="layout">
+    <!-- Board members -->
+    <aside class="col col-board">
+      <div class="col-head"><h2>The board</h2><span class="muted small" id="board-status">5 members</span></div>
+      <div id="members" class="members"></div>
+    </aside>
+
+    <!-- Deliberation -->
+    <section class="col col-thread">
+      <div class="col-head thread-head">
+        <h2>Deliberation</h2>
+        <ol class="phases" id="phases"></ol>
+      </div>
+      <div class="thread" id="thread">
+        <div class="empty" id="empty">
+          <div class="empty-mark">§</div>
+          <h3>The board hasn’t met yet.</h3>
+          <p>Five agents with competing mandates will argue the decision, stress-test it and vote. Every figure they quote comes from the financial model, not from the language model.</p>
+          <button class="btn btn-outline" id="convene-2">Convene the board</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decision panel -->
+    <aside class="col col-decision">
+      <div class="col-head"><h2>Options</h2><span class="muted small" id="rule"></span></div>
+      <p class="hint">Adjust any option’s levers (hiring, marketing, price, cost cuts, fundraising), then convene.</p>
+      <div id="options" class="options"></div>
+
+      <div class="block">
+        <div class="block-head"><h3>Votes</h3><span class="muted small" id="vote-summary">Not yet cast</span></div>
+        <div class="tally" id="tally"></div>
+      </div>
+
+      <div class="block">
+        <div class="block-head"><h3>Cash, next 24 months</h3></div>
+        <svg id="chart" viewBox="0 0 340 170" role="img" aria-label="Cash balance by option over 24 months"></svg>
+        <div class="legend" id="legend"></div>
+      </div>
+
+      <details class="block" id="assumptions-block">
+        <summary class="block-head"><h3>Assumptions</h3><span class="muted small" id="changed-count">model defaults</span></summary>
+        <div id="sliders" class="sliders"></div>
+        <button class="link" id="reset">Reset to defaults</button>
+      </details>
+
+      <details class="block">
+        <summary class="block-head"><h3>Fact sheet</h3><span class="muted small" id="fact-count"></span></summary>
+        <ol class="facts" id="facts"></ol>
+      </details>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

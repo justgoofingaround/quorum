@@ -1,0 +1,46 @@
+{
+  "company": {
+    "name": "Acme Cloud",
+    "sector": "B2B SaaS",
+    "cash": 4200000,
+    "mrr": 310000,
+    "monthly_opex": 410000,
+    "organic_growth": 0.025,
+    "churn": 0.02,
+    "gross_margin": 0.78,
+    "headcount": 38,
+    "arpa": 1200
+  },
+  "assumptions": {
+    "eng_monthly_cost": 15000,
+    "eng_ramp_months": 4,
+    "eng_growth_lift": 0.004,
+    "cac": 9000,
+    "marketing_months": 6,
+    "stress_mrr_shock": 0.3,
+    "min_stress_runway": 15,
+    "cac_saturation_spend": 150000
+  },
+  "options": [
+    {
+      "id": "A",
+      "label": "Hire 5 engineers",
+      "engineers": 5,
+      "marketing_budget": 0
+    },
+    {
+      "id": "B",
+      "label": "$600K marketing push",
+      "engineers": 0,
+      "marketing_budget": 600000
+    },
+    {
+      "id": "C",
+      "label": "Hire 3 engineers + $200K marketing",
+      "engineers": 3,
+      "marketing_budget": 200000
+    }
+  ],
+  "question": "Should we hire 5 engineers or spend $600K on marketing?",
+  "id": "acme"
+}

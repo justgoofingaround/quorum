@@ -1,0 +1,46 @@
+{
+  "id": "brightpath",
+  "company": {
+    "name": "Brightpath Dev",
+    "sector": "Developer tools",
+    "cash": 9000000,
+    "mrr": 520000,
+    "monthly_opex": 560000,
+    "organic_growth": 0.03,
+    "churn": 0.015,
+    "gross_margin": 0.82,
+    "headcount": 64,
+    "arpa": 2500
+  },
+  "assumptions": {
+    "eng_monthly_cost": 15000,
+    "eng_ramp_months": 4,
+    "eng_growth_lift": 0.0035,
+    "cac": 18000,
+    "marketing_months": 6,
+    "stress_mrr_shock": 0.3,
+    "min_stress_runway": 15,
+    "cac_saturation_spend": 120000
+  },
+  "options": [
+    {
+      "id": "A",
+      "label": "",
+      "engineers": 8,
+      "marketing_budget": 0
+    },
+    {
+      "id": "B",
+      "label": "",
+      "engineers": 0,
+      "marketing_budget": 900000
+    },
+    {
+      "id": "C",
+      "label": "",
+      "engineers": 4,
+      "marketing_budget": 400000
+    }
+  ],
+  "question": "We just raised. Do we double down on product or buy growth with marketing?"
+}

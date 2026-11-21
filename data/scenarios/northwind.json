@@ -1,0 +1,46 @@
+{
+  "id": "northwind",
+  "company": {
+    "name": "Northwind Pay",
+    "sector": "Fintech, pre-Series A",
+    "cash": 1600000,
+    "mrr": 140000,
+    "monthly_opex": 200000,
+    "organic_growth": 0.02,
+    "churn": 0.02,
+    "gross_margin": 0.6,
+    "headcount": 18,
+    "arpa": 900
+  },
+  "assumptions": {
+    "eng_monthly_cost": 16000,
+    "eng_ramp_months": 4,
+    "eng_growth_lift": 0.003,
+    "cac": 7000,
+    "marketing_months": 6,
+    "stress_mrr_shock": 0.3,
+    "min_stress_runway": 12,
+    "cac_saturation_spend": 100000
+  },
+  "options": [
+    {
+      "id": "A",
+      "label": "",
+      "engineers": 3,
+      "marketing_budget": 0
+    },
+    {
+      "id": "B",
+      "label": "",
+      "engineers": 0,
+      "marketing_budget": 300000
+    },
+    {
+      "id": "C",
+      "label": "",
+      "engineers": 2,
+      "marketing_budget": 150000
+    }
+  ],
+  "question": "We have 13 months of cash. Can we afford to hire or spend on marketing at all?"
+}
