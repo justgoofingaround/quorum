@@ -2,6 +2,8 @@
 
 An AI board of directors that debates your company's money decisions and can't be talked out of the numbers.
 
+![Quorum boardroom: the board, the live deliberation and the options with stress-test results](docs/screenshot.png)
+
 You ask a money question in plain English. Five agents with competing mandates (CFO, Head of Growth, COO, Risk Officer, Board Chair) debate it, stress-test it and vote, and a fixed rule picks the winner.
 
 **Agents argue, code calculates.** Every number comes from a deterministic financial model (`backend/model.py`). The LLM only drafts options and voices each agent's position. Any line that quotes a figure missing from the fact sheet, or backs the wrong option, is replaced with the grounded version and flagged.
